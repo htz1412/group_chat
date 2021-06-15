@@ -35,8 +35,9 @@ class MyApp extends StatelessWidget {
         builder: (ctx, AsyncSnapshot<User> stremSnapshot) {
           if (stremSnapshot.hasData) {
             return ChatScreen();
+          } else {
+            return AuthScreen();
           }
-          return AuthScreen();
         },
       ),
     );
